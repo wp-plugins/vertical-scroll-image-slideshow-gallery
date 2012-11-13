@@ -1,12 +1,14 @@
 === Vertical scroll image slideshow gallery ===
 Contributors: www.gopiplus.com, gopiplus
 Requires at least: 3.0
-Tested up to: 3.4.1
-Stable tag: 8.0
-Author URI: http://www.gopiplus.com/work/
+Tested up to: 3.4.2
+Stable tag: 8.1
+Author URI: http://www.gopiplus.com/work/2010/07/18/vertical-scroll-image-slideshow-gallery/
 Plugin URI: http://www.gopiplus.com/work/2010/07/18/vertical-scroll-image-slideshow-gallery/
 Donate link: http://www.gopiplus.com/work/2010/07/18/vertical-scroll-image-slideshow-gallery/
 Tags: Vertical, scroll, images, slideshow, gallery
+License: GPLv2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
 	
 This Vertical scroll image slideshow gallery plug-in will create the vertical scrolling image slideshow gallery at side sidebar widget see live demo.
 
@@ -32,7 +34,6 @@ http://www.gopiplus.com/work/2010/07/18/vertical-scroll-image-slideshow-gallery/
 **Plugin configuration**
 
 * Drag and drop the widget.
-
 * Add directly in the theme.
 
 == Installation ==
@@ -74,22 +75,25 @@ In this i have corrected the automatic installation problem.
 Tested upto 3.0, and new live demo link available.
 
 = 4.0 =
-Tested upto 3.1.2
+Tested up to 3.1.2
 
 = 5.0 =
-Tested upto 3.3
+Tested up to 3.3
 
 = 6.0 =
 Now support PNG, JPEG.
 Uppercase issue fixed.
-Tested upto 3.3.1
+Tested up to 3.3.1
 
 = 7.0 =	
-Tested upto wp 3.4 version
+Tested up to wp 3.4 version
 Tested with latest IE, Mozila, Chrome
 
 = 8.0 =
 New demo link, www.gopiplus.com
+
+= 8.1 =
+Tested up to 3.4.2
 
 == Changelog ==
 
@@ -119,3 +123,6 @@ Tested with latest IE, Mozila, Chrome
 
 = 8.0 =
 New demo link, www.gopiplus.com
+
+= 8.1 =
+Tested up to 3.4.2

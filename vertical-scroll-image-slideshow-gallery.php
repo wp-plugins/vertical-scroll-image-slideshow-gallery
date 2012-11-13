@@ -5,9 +5,11 @@ Plugin Name: Vertical scroll image slideshow gallery
 Plugin URI: http://www.gopiplus.com/work/2010/07/18/vertical-scroll-image-slideshow-gallery/
 Description:  This (VS slideshow) is a simple Image Vertical scroll slideshow Gallery plugin for WordPress widget. <a target="_blank" href='http://www.gopiplus.com/work/2010/07/18/vertical-scroll-image-slideshow-gallery/'>Click here to check more useful plugins.</a>
 Author: Gopi.R
-Version: 8.0
+Version: 8.1
 Author URI: http://www.gopiplus.com/work/
 Donate link: http://www.gopiplus.com/work/2010/07/18/vertical-scroll-image-slideshow-gallery/
+License: GPLv2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
 
 function VSslideshow_slideshow() 
@@ -31,175 +33,183 @@ function VSslideshow_slideshow()
 		$gSlideimglink = '#';
 	}
 	// open specified directory
-	$gSlidedirHandle = opendir($gSlidedir);
-	$vs_count = -1;
-	$returnstr = "";
-	$gSlidereturnstr = "";
-	while ($gSlidefile = readdir($gSlidedirHandle)) 
+	if(is_dir($gSlidedir))
 	{
-	  if(!is_dir($gSlidefile) && (strpos(strtoupper($gSlidefile), '.JPG')>0 or strpos(strtoupper($gSlidefile), '.GIF')>0 or strpos(strtoupper($gSlidefile), '.PNG')>0 or strpos(strtoupper($gSlidefile), '.JPEG')>0)) 
-	  {
-		 $vs_count++;
-		 $gSlidereturnstr = $gSlidereturnstr . "vs_slideimages[$vs_count]='<a href=\'$gSlideimglink\'><img src=\'$gSlidesiteurl/$gSlidedir$gSlidefile\' border=\'0\'></a>'; ";
-	  }
-	} 
-	echo $gSlidereturnstr;
-	closedir($gSlidedirHandle);
-	?>
+		$gSlidedirHandle = opendir($gSlidedir);
+		$vs_count = -1;
+		$returnstr = "";
+		$gSlidereturnstr = "";
 	
-	//////////////////////Vertical scroll image slideshow gallery/////////////////////////////////////////////
-	
-	var ie=document.all
-	var dom=document.getElementById
-	
-	if (vs_slideimages.length>2)
-	vs_i=2
-	else
-	vs_i=0
-	
-	function vs_move1(whichlayer){
-	tlayer=eval(whichlayer)
-	if (tlayer.top>0&&tlayer.top<=5){
-	tlayer.top=0
-	setTimeout("vs_move1(tlayer)",vs_pausebetweenimages)
-	setTimeout("vs_move2(document.vs_main.document.vs_second)",vs_pausebetweenimages)
-	return
-	}
-	if (tlayer.top>=tlayer.document.height*-1){
-	tlayer.top-=5
-	setTimeout("vs_move1(tlayer)",50)
-	}
-	else{
-	tlayer.top=parseInt(vs_scrollerheight)
-	tlayer.document.write(vs_slideimages[vs_i])
-	tlayer.document.close()
-	if (vs_i==vs_slideimages.length-1)
-	vs_i=0
-	else
-	vs_i++
-	}
-	}
-	
-	function vs_move2(whichlayer){
-	tlayer2=eval(whichlayer)
-	if (tlayer2.top>0&&tlayer2.top<=5){
-	tlayer2.top=0
-	setTimeout("vs_move2(tlayer2)",vs_pausebetweenimages)
-	setTimeout("vs_move1(document.vs_main.document.vs_first)",vs_pausebetweenimages)
-	return
-	}
-	if (tlayer2.top>=tlayer2.document.height*-1){
-	tlayer2.top-=5
-	setTimeout("vs_move2(tlayer2)",50)
-	}
-	else{
-	tlayer2.top=parseInt(vs_scrollerheight)
-	tlayer2.document.write(vs_slideimages[vs_i])
-	tlayer2.document.close()
-	if (vs_i==vs_slideimages.length-1)
-	vs_i=0
-	else
-	vs_i++
-	}
-	}
-	
-	function vs_move3(whichdiv){
-	tdiv=eval(whichdiv)
-	if (parseInt(tdiv.style.top)>0&&parseInt(tdiv.style.top)<=5){
-	tdiv.style.top=0+"px"
-	setTimeout("vs_move3(tdiv)",vs_pausebetweenimages)
-	setTimeout("vs_move4(vs_second2_obj)",vs_pausebetweenimages)
-	return
-	}
-	if (parseInt(tdiv.style.top)>=tdiv.offsetHeight*-1){
-	tdiv.style.top=parseInt(tdiv.style.top)-5+"px"
-	setTimeout("vs_move3(tdiv)",50)
-	}
-	else{
-	tdiv.style.top=vs_scrollerheight
-	tdiv.innerHTML=vs_slideimages[vs_i]
-	if (vs_i==vs_slideimages.length-1)
-	vs_i=0
-	else
-	vs_i++
-	}
-	}
-	
-	function vs_move4(whichdiv){
-	tdiv2=eval(whichdiv)
-	if (parseInt(tdiv2.style.top)>0&&parseInt(tdiv2.style.top)<=5){
-	tdiv2.style.top=0+"px"
-	setTimeout("vs_move4(tdiv2)",vs_pausebetweenimages)
-	setTimeout("vs_move3(vs_first2_obj)",vs_pausebetweenimages)
-	return
-	}
-	if (parseInt(tdiv2.style.top)>=tdiv2.offsetHeight*-1){
-	tdiv2.style.top=parseInt(tdiv2.style.top)-5+"px"
-	setTimeout("vs_move4(vs_second2_obj)",50)
-	}
-	else{
-	tdiv2.style.top=vs_scrollerheight
-	tdiv2.innerHTML=vs_slideimages[vs_i]
-	if (vs_i==vs_slideimages.length-1)
-	vs_i=0
-	else
-	vs_i++
-	}
-	}
-	
-	function startscroll(){
-	if (ie||dom){
-	vs_first2_obj=ie? vs_first2 : document.getElementById("vs_first2")
-	vs_second2_obj=ie? vs_second2 : document.getElementById("vs_second2")
-	vs_move3(vs_first2_obj)
-	vs_second2_obj.style.top=vs_scrollerheight
-	vs_second2_obj.style.visibility='visible'
-	}
-	else if (document.layers){
-	document.vs_main.visibility='show'
-	vs_move1(document.vs_main.document.vs_first)
-	document.vs_main.document.vs_second.top=parseInt(vs_scrollerheight)+5
-	document.vs_main.document.vs_second.visibility='show'
-	}
-	}
-	
-	window.onload=startscroll
-	
-	</script>
-	
-	<ilayer id="vs_main" width=&{vs_scrollerwidth}; height=&{vs_scrollerheight}; visibility=hide>
-	<layer id="vs_first" width=&{vs_scrollerwidth};>
-	<script language="JavaScript1.2">
-	if (document.layers)
-	document.write(vs_slideimages[0])
-	</script>
-	</layer>
-	<layer id="vs_second" width=&{vs_scrollerwidth}; visibility=hide>
-	<script language="JavaScript1.2">
-	if (document.layers)
-	document.write(vs_slideimages[dyndetermine=(vs_slideimages.length==1)? 0 : 1])
-	</script>
-	</layer>
-	</ilayer>
-	<script language="JavaScript1.2">
-	if (ie||dom)
-	{
-		document.writeln('<div style="padding:8px 0px 8px 0px;">')
-		document.writeln('<div id="vs_main2" style="position:relative;width:'+vs_scrollerwidth+';height:'+vs_scrollerheight+';overflow:hidden;">')
-		document.writeln('<div style="position:absolute;width:'+vs_scrollerwidth+';height:'+vs_scrollerheight+';clip:rect(0 '+vs_scrollerwidth+' '+vs_scrollerheight+' 0);">')
-		document.writeln('<div id="vs_first2" style="position:absolute;width:'+vs_scrollerwidth+';left:0px;top:1px;">')
+		while ($gSlidefile = readdir($gSlidedirHandle)) 
+		{
+		  if(!is_dir($gSlidefile) && (strpos(strtoupper($gSlidefile), '.JPG')>0 or strpos(strtoupper($gSlidefile), '.GIF')>0 or strpos(strtoupper($gSlidefile), '.PNG')>0 or strpos(strtoupper($gSlidefile), '.JPEG')>0)) 
+		  {
+			 $vs_count++;
+			 $gSlidereturnstr = $gSlidereturnstr . "vs_slideimages[$vs_count]='<a href=\'$gSlideimglink\'><img src=\'$gSlidesiteurl/$gSlidedir$gSlidefile\' border=\'0\'></a>'; ";
+		  }
+		} 
+		echo $gSlidereturnstr;
+		closedir($gSlidedirHandle);
+		?>
+		
+		//////////////////////Vertical scroll image slideshow gallery/////////////////////////////////////////////
+		
+		var ie=document.all
+		var dom=document.getElementById
+		
+		if (vs_slideimages.length>2)
+		vs_i=2
+		else
+		vs_i=0
+		
+		function vs_move1(whichlayer){
+		tlayer=eval(whichlayer)
+		if (tlayer.top>0&&tlayer.top<=5){
+		tlayer.top=0
+		setTimeout("vs_move1(tlayer)",vs_pausebetweenimages)
+		setTimeout("vs_move2(document.vs_main.document.vs_second)",vs_pausebetweenimages)
+		return
+		}
+		if (tlayer.top>=tlayer.document.height*-1){
+		tlayer.top-=5
+		setTimeout("vs_move1(tlayer)",50)
+		}
+		else{
+		tlayer.top=parseInt(vs_scrollerheight)
+		tlayer.document.write(vs_slideimages[vs_i])
+		tlayer.document.close()
+		if (vs_i==vs_slideimages.length-1)
+		vs_i=0
+		else
+		vs_i++
+		}
+		}
+		
+		function vs_move2(whichlayer){
+		tlayer2=eval(whichlayer)
+		if (tlayer2.top>0&&tlayer2.top<=5){
+		tlayer2.top=0
+		setTimeout("vs_move2(tlayer2)",vs_pausebetweenimages)
+		setTimeout("vs_move1(document.vs_main.document.vs_first)",vs_pausebetweenimages)
+		return
+		}
+		if (tlayer2.top>=tlayer2.document.height*-1){
+		tlayer2.top-=5
+		setTimeout("vs_move2(tlayer2)",50)
+		}
+		else{
+		tlayer2.top=parseInt(vs_scrollerheight)
+		tlayer2.document.write(vs_slideimages[vs_i])
+		tlayer2.document.close()
+		if (vs_i==vs_slideimages.length-1)
+		vs_i=0
+		else
+		vs_i++
+		}
+		}
+		
+		function vs_move3(whichdiv){
+		tdiv=eval(whichdiv)
+		if (parseInt(tdiv.style.top)>0&&parseInt(tdiv.style.top)<=5){
+		tdiv.style.top=0+"px"
+		setTimeout("vs_move3(tdiv)",vs_pausebetweenimages)
+		setTimeout("vs_move4(vs_second2_obj)",vs_pausebetweenimages)
+		return
+		}
+		if (parseInt(tdiv.style.top)>=tdiv.offsetHeight*-1){
+		tdiv.style.top=parseInt(tdiv.style.top)-5+"px"
+		setTimeout("vs_move3(tdiv)",50)
+		}
+		else{
+		tdiv.style.top=vs_scrollerheight
+		tdiv.innerHTML=vs_slideimages[vs_i]
+		if (vs_i==vs_slideimages.length-1)
+		vs_i=0
+		else
+		vs_i++
+		}
+		}
+		
+		function vs_move4(whichdiv){
+		tdiv2=eval(whichdiv)
+		if (parseInt(tdiv2.style.top)>0&&parseInt(tdiv2.style.top)<=5){
+		tdiv2.style.top=0+"px"
+		setTimeout("vs_move4(tdiv2)",vs_pausebetweenimages)
+		setTimeout("vs_move3(vs_first2_obj)",vs_pausebetweenimages)
+		return
+		}
+		if (parseInt(tdiv2.style.top)>=tdiv2.offsetHeight*-1){
+		tdiv2.style.top=parseInt(tdiv2.style.top)-5+"px"
+		setTimeout("vs_move4(vs_second2_obj)",50)
+		}
+		else{
+		tdiv2.style.top=vs_scrollerheight
+		tdiv2.innerHTML=vs_slideimages[vs_i]
+		if (vs_i==vs_slideimages.length-1)
+		vs_i=0
+		else
+		vs_i++
+		}
+		}
+		
+		function startscroll(){
+		if (ie||dom){
+		vs_first2_obj=ie? vs_first2 : document.getElementById("vs_first2")
+		vs_second2_obj=ie? vs_second2 : document.getElementById("vs_second2")
+		vs_move3(vs_first2_obj)
+		vs_second2_obj.style.top=vs_scrollerheight
+		vs_second2_obj.style.visibility='visible'
+		}
+		else if (document.layers){
+		document.vs_main.visibility='show'
+		vs_move1(document.vs_main.document.vs_first)
+		document.vs_main.document.vs_second.top=parseInt(vs_scrollerheight)+5
+		document.vs_main.document.vs_second.visibility='show'
+		}
+		}
+		
+		window.onload=startscroll
+		
+		</script>
+		
+		<ilayer id="vs_main" width=&{vs_scrollerwidth}; height=&{vs_scrollerheight}; visibility=hide>
+		<layer id="vs_first" width=&{vs_scrollerwidth};>
+		<script language="JavaScript1.2">
+		if (document.layers)
 		document.write(vs_slideimages[0])
-		document.writeln('</div>')
-		document.writeln('<div id="vs_second2" style="position:absolute;width:'+vs_scrollerwidth+';visibility:hidden">')
+		</script>
+		</layer>
+		<layer id="vs_second" width=&{vs_scrollerwidth}; visibility=hide>
+		<script language="JavaScript1.2">
+		if (document.layers)
 		document.write(vs_slideimages[dyndetermine=(vs_slideimages.length==1)? 0 : 1])
-		document.writeln('</div>')
-		document.writeln('</div>')
-		document.writeln('</div>')
-		document.writeln('</div>')
+		</script>
+		</layer>
+		</ilayer>
+		<script language="JavaScript1.2">
+		if (ie||dom)
+		{
+			document.writeln('<div style="padding:8px 0px 8px 0px;">')
+			document.writeln('<div id="vs_main2" style="position:relative;width:'+vs_scrollerwidth+';height:'+vs_scrollerheight+';overflow:hidden;">')
+			document.writeln('<div style="position:absolute;width:'+vs_scrollerwidth+';height:'+vs_scrollerheight+';clip:rect(0 '+vs_scrollerwidth+' '+vs_scrollerheight+' 0);">')
+			document.writeln('<div id="vs_first2" style="position:absolute;width:'+vs_scrollerwidth+';left:0px;top:1px;">')
+			document.write(vs_slideimages[0])
+			document.writeln('</div>')
+			document.writeln('<div id="vs_second2" style="position:absolute;width:'+vs_scrollerwidth+';visibility:hidden">')
+			document.write(vs_slideimages[dyndetermine=(vs_slideimages.length==1)? 0 : 1])
+			document.writeln('</div>')
+			document.writeln('</div>')
+			document.writeln('</div>')
+			document.writeln('</div>')
+		}
+		</script>
+		
+		<?php
 	}
-	</script>
-    
-	<?php
+	else
+	{
+		echo "Folder not found<br />" . $gSlidedir;
+	}
 	
 }
 
@@ -295,12 +305,12 @@ function VSslideshow_widget_init()
 
 function VSslideshow_deactivation() 
 {
-//	delete_option('VSslideshow_title');
-//	delete_option('VSslideshow_width');
-//	delete_option('VSslideshow_height');
-//	delete_option('VSslideshow_time');
-//	delete_option('VSslideshow_dir');
-//	delete_option('VSslideshow_imglink');
+	//	delete_option('VSslideshow_title');
+	//	delete_option('VSslideshow_width');
+	//	delete_option('VSslideshow_height');
+	//	delete_option('VSslideshow_time');
+	//	delete_option('VSslideshow_dir');
+	//	delete_option('VSslideshow_imglink');
 }
 
 add_action("plugins_loaded", "VSslideshow_widget_init");
