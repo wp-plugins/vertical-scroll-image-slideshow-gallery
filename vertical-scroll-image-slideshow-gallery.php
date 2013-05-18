@@ -5,7 +5,7 @@ Plugin Name: Vertical scroll image slideshow gallery
 Plugin URI: http://www.gopiplus.com/work/2010/07/18/vertical-scroll-image-slideshow-gallery/
 Description:  This (VS slideshow) is a simple Image Vertical scroll slideshow Gallery plugin for WordPress widget. <a target="_blank" href='http://www.gopiplus.com/work/2010/07/18/vertical-scroll-image-slideshow-gallery/'>Click here to check more useful plugins.</a>
 Author: Gopi.R
-Version: 8.2
+Version: 9.0
 Author URI: http://www.gopiplus.com/work/
 Donate link: http://www.gopiplus.com/work/2010/07/18/vertical-scroll-image-slideshow-gallery/
 License: GPLv2 or later
@@ -210,10 +210,7 @@ function VSslideshow_slideshow()
 	{
 		echo "Folder not found<br />" . $gSlidedir;
 	}
-	
 }
-
-
 
 function VSslideshow_install() 
 {
@@ -286,7 +283,7 @@ function VSslideshow_control()
 	echo '<input type="hidden" id="VSslideshow_submit" name="VSslideshow_submit" value="1" />';
 	
 	?>
-	<a target="_blank" href='http://www.gopiplus.com/work/2010/07/18/vertical-scroll-image-slideshow-gallery/'>Check official website for more info</a><br> 
+	<a target="_blank" href="http://www.gopiplus.com/work/2010/07/18/vertical-scroll-image-slideshow-gallery/">Check official website for more info</a><br> 
 	<?php
 }
 
@@ -305,12 +302,7 @@ function VSslideshow_widget_init()
 
 function VSslideshow_deactivation() 
 {
-	//	delete_option('VSslideshow_title');
-	//	delete_option('VSslideshow_width');
-	//	delete_option('VSslideshow_height');
-	//	delete_option('VSslideshow_time');
-	//	delete_option('VSslideshow_dir');
-	//	delete_option('VSslideshow_imglink');
+	// No required.
 }
 
 add_action("plugins_loaded", "VSslideshow_widget_init");

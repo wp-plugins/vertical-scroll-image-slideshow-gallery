@@ -1,8 +1,8 @@
 === Vertical scroll image slideshow gallery ===
 Contributors: www.gopiplus.com, gopiplus
-Requires at least: 3.0
-Tested up to: 3.5
-Stable tag: 8.2
+Requires at least: 3.4
+Tested up to: 3.6
+Stable tag: 9.0
 Author URI: http://www.gopiplus.com/work/2010/07/18/vertical-scroll-image-slideshow-gallery/
 Plugin URI: http://www.gopiplus.com/work/2010/07/18/vertical-scroll-image-slideshow-gallery/
 Donate link: http://www.gopiplus.com/work/2010/07/18/vertical-scroll-image-slideshow-gallery/
@@ -98,6 +98,9 @@ Tested up to 3.4.2
 = 8.2 =
 Tested up to 3.5
 
+= 9.0 =
+Tested up to 3.6
+
 == Changelog ==
 
 = 1.0 =
@@ -132,3 +135,6 @@ Tested up to 3.4.2
 
 = 8.2 =
 Tested up to 3.5
+
+= 9.0 =
+Tested up to 3.6
