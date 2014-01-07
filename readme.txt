@@ -65,42 +65,54 @@ Installation Instruction and Configuration check this link : [http://www.gopiplu
 == Upgrade Notice ==
 
 = 1.0 =
+
 First version.
 
 = 2.0 =
+
 In this i have corrected the automatic installation problem.
 
 = 3.0 =
+
 Tested upto 3.0, and new live demo link available.
 
 = 4.0 =
+
 Tested up to 3.1.2
 
 = 5.0 =
+
 Tested up to 3.3
 
 = 6.0 =
+
 Now support PNG, JPEG.
 Uppercase issue fixed.
 Tested up to 3.3.1
 
 = 7.0 =	
+
 Tested up to wp 3.4 version
 Tested with latest IE, Mozila, Chrome
 
 = 8.0 =
+
 New demo link, www.gopiplus.com
 
 = 8.1 =
+
 Tested up to 3.4.2
 
 = 8.2 =
+
 Tested up to 3.5
 
 = 9.0 =
+
 Tested up to 3.6
 
 = 9.1 =
+
 1. Tested up to 3.8
 2. Now this plugin supports localization (or internationalization). i.e. option to translate into other languages. 
 Plugin *.po file (vs-slideshow.po) available in the languages folder. Translators Welcome.
@@ -108,42 +120,52 @@ Plugin *.po file (vs-slideshow.po) available in the languages folder. Translator
 == Changelog ==
 
 = 1.0 =
+
 First version.
 
 = 2.0 =
+
 In this i have corrected the automatic installation problem.
 
 = 3.0 =
+
 Tested upto 3.0, and new live demo link available.
 
 = 4.0 =
+
 Tested upto 3.1.2
 
 = 5.0 =
 Tested upto 3.3
 
 = 6.0 =
+
 Now support PNG, JPEG.
 Uppercase issue fixed.
 Tested upto 3.3.1
 
 = 7.0 =	
+
 Tested upto wp 3.4 version
 Tested with latest IE, Mozila, Chrome
 
 = 8.0 =
+
 New demo link, www.gopiplus.com
 
 = 8.1 =
 Tested up to 3.4.2
 
 = 8.2 =
+
 Tested up to 3.5
 
 = 9.0 =
+
 Tested up to 3.6
 
 = 9.1 =
+
 1. Tested up to 3.8
 2. Now this plugin supports localization (or internationalization). i.e. option to translate into other languages. 
 Plugin *.po file (vs-slideshow.po) available in the languages folder. Translators Welcome.
