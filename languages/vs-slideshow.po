@@ -1,0 +1,64 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Vertical scroll image slideshow gallery\n"
+"POT-Creation-Date: 2014-01-07 22:38+0800\n"
+"PO-Revision-Date: 2014-01-07 22:38+0800\n"
+"Last-Translator: \n"
+"Language-Team: www.gopiplus.com <www.gopiplus.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.7\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;_e;__\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../vertical-scroll-image-slideshow-gallery.php:260
+msgid "Title:"
+msgstr ""
+
+#: ../vertical-scroll-image-slideshow-gallery.php:263
+msgid ""
+"Set the scrollerwidth and scrollerheight to the width/height of the LARGEST "
+"image in your slideshow!"
+msgstr ""
+
+#: ../vertical-scroll-image-slideshow-gallery.php:265
+msgid "Width:"
+msgstr ""
+
+#: ../vertical-scroll-image-slideshow-gallery.php:268
+msgid "Height:"
+msgstr ""
+
+#: ../vertical-scroll-image-slideshow-gallery.php:271
+msgid "Slide timeout:"
+msgstr ""
+
+#: ../vertical-scroll-image-slideshow-gallery.php:274
+msgid "Images Link:"
+msgstr ""
+
+#: ../vertical-scroll-image-slideshow-gallery.php:277
+msgid "Image directory: (Upload all your images in this directory)"
+msgstr ""
+
+#: ../vertical-scroll-image-slideshow-gallery.php:280
+msgid ""
+"Best practice: Dont upload your original images into this default folder "
+"instead you change this default path to original path. Otherwise you may "
+"lose the images when you update the plugin to next version."
+msgstr ""
+
+#: ../vertical-scroll-image-slideshow-gallery.php:285
+msgid "Check official website for more info"
+msgstr ""
+
+#: ../vertical-scroll-image-slideshow-gallery.php:286
+msgid "Click here"
+msgstr ""
+
+#: ../vertical-scroll-image-slideshow-gallery.php:294
+#: ../vertical-scroll-image-slideshow-gallery.php:299
+msgid "VS slideshow"
+msgstr ""

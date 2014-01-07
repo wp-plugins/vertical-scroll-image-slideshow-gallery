@@ -1,11 +1,10 @@
 <?php
-
 /*
 Plugin Name: Vertical scroll image slideshow gallery
 Plugin URI: http://www.gopiplus.com/work/2010/07/18/vertical-scroll-image-slideshow-gallery/
 Description:  This (VS slideshow) is a simple Image Vertical scroll slideshow Gallery plugin for WordPress widget. <a target="_blank" href='http://www.gopiplus.com/work/2010/07/18/vertical-scroll-image-slideshow-gallery/'>Click here to check more useful plugins.</a>
 Author: Gopi.R
-Version: 9.0
+Version: 9.1
 Author URI: http://www.gopiplus.com/work/
 Donate link: http://www.gopiplus.com/work/2010/07/18/vertical-scroll-image-slideshow-gallery/
 License: GPLv2 or later
@@ -14,17 +13,6 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 function VSslideshow_slideshow() 
 {
-	
-	?>
-	<script language="JavaScript1.2">
-	
-	var vs_scrollerwidth='<?php echo get_option('VSslideshow_width'); ?>'
-	var vs_scrollerheight='<?php echo get_option('VSslideshow_height'); ?>'
-	var vs_pausebetweenimages=<?php echo get_option('VSslideshow_time'); ?>
-	
-	var vs_slideimages=new Array()
-	
-	<?php
 	$gSlidedir = get_option('VSslideshow_dir');
 	$gSlideimglink = get_option('VSslideshow_imglink');
 	$gSlidesiteurl = get_option('siteurl');
@@ -35,6 +23,16 @@ function VSslideshow_slideshow()
 	// open specified directory
 	if(is_dir($gSlidedir))
 	{
+		?>
+		<script language="JavaScript1.2">
+		
+		var vs_scrollerwidth='<?php echo get_option('VSslideshow_width'); ?>'
+		var vs_scrollerheight='<?php echo get_option('VSslideshow_height'); ?>'
+		var vs_pausebetweenimages=<?php echo get_option('VSslideshow_time'); ?>
+		
+		var vs_slideimages=new Array()
+		<?php
+		
 		$gSlidedirHandle = opendir($gSlidedir);
 		$vs_count = -1;
 		$returnstr = "";
@@ -258,32 +256,33 @@ function VSslideshow_control()
 		update_option('VSslideshow_imglink', $VSslideshow_imglink );
 	}
 	
-	echo '<p>Title:<input  style="width: 400px;" maxlength="100" type="text" value="';
+	echo '<p>'.__('Title:', 'vs-slideshow').' <input  style="width: 400px;" maxlength="100" type="text" value="';
 	echo $VSslideshow_title . '" name="VSslideshow_title" id="VSslideshow_title" /></p>';
 	
-	echo '<p>Set the scrollerwidth and scrollerheight to the width/height of the LARGEST image in your slideshow!</p>';
+	echo '<p>'.__('Set the scrollerwidth and scrollerheight to the width/height of the LARGEST image in your slideshow!', 'vs-slideshow').'</p>';
 	
-	echo '<p>Width:<input  style="width: 100px;" maxlength="5" type="text" value="';
+	echo '<p>'.__('Width:', 'vs-slideshow').' <input  style="width: 100px;" maxlength="5" type="text" value="';
 	echo $VSslideshow_width . '" name="VSslideshow_width" id="VSslideshow_width" />';
 	
-	echo '&nbsp;&nbsp;&nbsp;Height:<input  style="width: 100px;" maxlength="5" type="text" value="';
+	echo '&nbsp;&nbsp;&nbsp;'.__('Height:', 'vs-slideshow').' <input  style="width: 100px;" maxlength="5" type="text" value="';
 	echo $VSslideshow_height . '" name="VSslideshow_height" id="VSslideshow_height" /></p>';
 	
-	echo '<p>Slide timeout:<input  style="width: 200px;" maxlength="6" type="text" value="';
-	echo $VSslideshow_time . '" name="VSslideshow_time" id="VSslideshow_time" />(3000 = 3 seconds)</p>';
+	echo '<p>'.__('Slide timeout:', 'vs-slideshow').' <input  style="width: 200px;" maxlength="6" type="text" value="';
+	echo $VSslideshow_time . '" name="VSslideshow_time" id="VSslideshow_time" /> (3000 = 3 seconds)</p>';
 	
-	echo '<p>Images Link:<br><input  style="width: 570px;" type="text" value="';
+	echo '<p>'.__('Images Link:', 'vs-slideshow').'<br><input  style="width: 570px;" type="text" value="';
 	echo $VSslideshow_imglink . '" name="VSslideshow_imglink" id="VSslideshow_imglink" /></p>';
 	
-	echo '<p>Image directory:(Upload all your images in this directory)<br><input  style="width: 570px;" type="text" value="';
+	echo '<p>'.__('Image directory: (Upload all your images in this directory)', 'vs-slideshow').'<br><input  style="width: 570px;" type="text" value="';
 	echo $VSslideshow_dir . '" name="VSslideshow_dir" id="VSslideshow_dir" />';
 	echo '<br />Default: wp-content/plugins/vertical-scroll-image-slideshow-gallery/VSslideshow/';
-	echo '<br /><br />Best practice : Dont upload your original images into this default folder instead you change this default path to original path. Otherwise you may lose the images when you update the plugin to next version.</p>';
+	echo '<br /><br />'.__('Best practice: Dont upload your original images into this default folder instead you change this default path to original path. Otherwise you may lose the images when you update the plugin to next version.', 'vs-slideshow').'</p>';
 	
 	echo '<input type="hidden" id="VSslideshow_submit" name="VSslideshow_submit" value="1" />';
 	
 	?>
-	<a target="_blank" href="http://www.gopiplus.com/work/2010/07/18/vertical-scroll-image-slideshow-gallery/">Check official website for more info</a><br> 
+	<?php _e('Check official website for more info', 'vs-slideshow'); ?> 
+	<a target="_blank" href="http://www.gopiplus.com/work/2010/07/18/vertical-scroll-image-slideshow-gallery/"><?php _e('Click here', 'vs-slideshow'); ?></a><br><br> 
 	<?php
 }
 
@@ -291,12 +290,12 @@ function VSslideshow_widget_init()
 {
 	if(function_exists('wp_register_sidebar_widget')) 	
 	{
-		wp_register_sidebar_widget('vs-slideshow', 'VS slideshow', 'VSslideshow_widget');
+		wp_register_sidebar_widget('vs-slideshow', __('VS slideshow', 'vs-slideshow'), 'VSslideshow_widget');
 	}
 	
 	if(function_exists('wp_register_widget_control')) 	
 	{
-		wp_register_widget_control('vs-slideshow', array('VS slideshow', 'widgets'), 'VSslideshow_control', 'width=650');
+		wp_register_widget_control('vs-slideshow', array(__('VS slideshow', 'vs-slideshow'), 'widgets'), 'VSslideshow_control', 'width=650');
 	} 
 }
 
@@ -305,6 +304,12 @@ function VSslideshow_deactivation()
 	// No required.
 }
 
+function VSslideshow_textdomain() 
+{
+	  load_plugin_textdomain( 'vs-slideshow', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
+}
+
+add_action('plugins_loaded', 'VSslideshow_textdomain');
 add_action("plugins_loaded", "VSslideshow_widget_init");
 register_activation_hook(__FILE__, 'VSslideshow_install');
 register_deactivation_hook(__FILE__, 'VSslideshow_deactivation');
