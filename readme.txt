@@ -42,7 +42,6 @@ http://www.gopiplus.com/work/2010/07/18/vertical-scroll-image-slideshow-gallery/
 
 Installation Instruction and Configuration check this link : [http://www.gopiplus.com/work/2010/07/18/vertical-scroll-image-slideshow-gallery/](http://www.gopiplus.com/work/2010/07/18/vertical-scroll-image-slideshow-gallery/)
 
- 
 == Frequently Asked Questions ==
 
 **I installed the plugin but can't see it. What's wrong?**  
@@ -59,9 +58,9 @@ Installation Instruction and Configuration check this link : [http://www.gopiplu
 
 == Screenshots ==
 
-1. Screenshot Admin Area. http://www.gopiplus.com/work/2010/07/18/vertical-scroll-image-slideshow-gallery/
+1. http://www.gopiplus.com/work/2010/07/18/vertical-scroll-image-slideshow-gallery/
 
-2. Screenshot Front Area. http://www.gopiplus.com/work/2010/07/18/vertical-scroll-image-slideshow-gallery/
+2. http://www.gopiplus.com/work/2010/07/18/vertical-scroll-image-slideshow-gallery/
 
 == Upgrade Notice ==
 
