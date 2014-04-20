@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Vertical scroll image slideshow gallery\n"
-"POT-Creation-Date: 2014-01-07 22:38+0800\n"
-"PO-Revision-Date: 2014-01-07 22:38+0800\n"
+"POT-Creation-Date: 2014-04-20 01:30+0800\n"
+"PO-Revision-Date: 2014-04-20 01:30+0800\n"
 "Last-Translator: \n"
 "Language-Team: www.gopiplus.com <www.gopiplus.com>\n"
 "MIME-Version: 1.0\n"
@@ -13,52 +13,52 @@ msgstr ""
 "X-Poedit-Basepath: .\n"
 "X-Poedit-SearchPath-0: ..\n"
 
-#: ../vertical-scroll-image-slideshow-gallery.php:260
+#: ../vertical-scroll-image-slideshow-gallery.php:259
 msgid "Title:"
 msgstr ""
 
-#: ../vertical-scroll-image-slideshow-gallery.php:263
+#: ../vertical-scroll-image-slideshow-gallery.php:262
 msgid ""
 "Set the scrollerwidth and scrollerheight to the width/height of the LARGEST "
 "image in your slideshow!"
 msgstr ""
 
-#: ../vertical-scroll-image-slideshow-gallery.php:265
+#: ../vertical-scroll-image-slideshow-gallery.php:264
 msgid "Width:"
 msgstr ""
 
-#: ../vertical-scroll-image-slideshow-gallery.php:268
+#: ../vertical-scroll-image-slideshow-gallery.php:267
 msgid "Height:"
 msgstr ""
 
-#: ../vertical-scroll-image-slideshow-gallery.php:271
+#: ../vertical-scroll-image-slideshow-gallery.php:270
 msgid "Slide timeout:"
 msgstr ""
 
-#: ../vertical-scroll-image-slideshow-gallery.php:274
+#: ../vertical-scroll-image-slideshow-gallery.php:273
 msgid "Images Link:"
 msgstr ""
 
-#: ../vertical-scroll-image-slideshow-gallery.php:277
+#: ../vertical-scroll-image-slideshow-gallery.php:276
 msgid "Image directory: (Upload all your images in this directory)"
 msgstr ""
 
-#: ../vertical-scroll-image-slideshow-gallery.php:280
+#: ../vertical-scroll-image-slideshow-gallery.php:279
 msgid ""
 "Best practice: Dont upload your original images into this default folder "
 "instead you change this default path to original path. Otherwise you may "
 "lose the images when you update the plugin to next version."
 msgstr ""
 
-#: ../vertical-scroll-image-slideshow-gallery.php:285
+#: ../vertical-scroll-image-slideshow-gallery.php:284
 msgid "Check official website for more info"
 msgstr ""
 
-#: ../vertical-scroll-image-slideshow-gallery.php:286
+#: ../vertical-scroll-image-slideshow-gallery.php:285
 msgid "Click here"
 msgstr ""
 
-#: ../vertical-scroll-image-slideshow-gallery.php:294
-#: ../vertical-scroll-image-slideshow-gallery.php:299
+#: ../vertical-scroll-image-slideshow-gallery.php:293
+#: ../vertical-scroll-image-slideshow-gallery.php:298
 msgid "VS slideshow"
 msgstr ""
