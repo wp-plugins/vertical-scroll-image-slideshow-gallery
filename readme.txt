@@ -1,8 +1,8 @@
 === Vertical scroll image slideshow gallery ===
 Contributors: www.gopiplus.com, gopiplus
 Requires at least: 3.4
-Tested up to: 3.9
-Stable tag: 9.2
+Tested up to: 4.0
+Stable tag: 9.3
 Author URI: http://www.gopiplus.com/work/2010/07/18/vertical-scroll-image-slideshow-gallery/
 Plugin URI: http://www.gopiplus.com/work/2010/07/18/vertical-scroll-image-slideshow-gallery/
 Donate link: http://www.gopiplus.com/work/2010/07/18/vertical-scroll-image-slideshow-gallery/
@@ -10,15 +10,15 @@ Tags: Vertical, scroll, images, slideshow, gallery
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 	
-This Vertical scroll image slideshow gallery plug-in will create the vertical scrolling image slideshow gallery at side sidebar widget see live demo.
+This Vertical scroll image slideshow gallery plug-in will create the vertical scrolling image slideshow gallery at side sidebar widget.
 
 == Description ==
 	
-Check official website for live demo : [http://www.gopiplus.com/work/2010/07/18/vertical-scroll-image-slideshow-gallery/](http://www.gopiplus.com/work/2010/07/18/vertical-scroll-image-slideshow-gallery/)
+Check official website for live demo [http://www.gopiplus.com/work/2010/07/18/vertical-scroll-image-slideshow-gallery/](http://www.gopiplus.com/work/2010/07/18/vertical-scroll-image-slideshow-gallery/)
 	
-* Live Demo : [Live Demo](http://www.gopiplus.com/work/2010/07/18/vertical-scroll-image-slideshow-gallery/)	
-* More Information : [More information](http://www.gopiplus.com/work/2010/07/18/vertical-scroll-image-slideshow-gallery/)					
-* User Comments : [User Comments](http://www.gopiplus.com/work/2010/07/18/vertical-scroll-image-slideshow-gallery/)				
+* [Live Demo](http://www.gopiplus.com/work/2010/07/18/vertical-scroll-image-slideshow-gallery/)	
+* [More information](http://www.gopiplus.com/work/2010/07/18/vertical-scroll-image-slideshow-gallery/)					
+* [Contact](http://www.gopiplus.com/work/2010/07/18/vertical-scroll-image-slideshow-gallery/)				
 
 Vertical scroll image slideshow gallery plugin lets you showcase images in a vertical scroll style in the WordPress widget. Single image at a time and push one by one continually. The speed of the image movement is customizable (Slide timeout). And this plugin retrieve images directly from the specified folder. The file names are returned in the order in which they are stored by the file system. So the order of the image display is based on the file uploaded date.
 
@@ -38,23 +38,21 @@ http://www.gopiplus.com/work/2010/07/18/vertical-scroll-image-slideshow-gallery/
 
 == Installation ==
 
-**Installation Instruction & Configuration**
-
 Installation Instruction and Configuration check this link : [http://www.gopiplus.com/work/2010/07/18/vertical-scroll-image-slideshow-gallery/](http://www.gopiplus.com/work/2010/07/18/vertical-scroll-image-slideshow-gallery/)
 
 == Frequently Asked Questions ==
 
-**I installed the plugin but can't see it. What's wrong?**  
+1. I installed the plugin but can't see it. What's wrong?  
   
-**Where to upload my image?**  
+2. Where to upload my image?
 
-**How to upload my image?** 
+3. How to upload my image?
  
-**Widget title appears but no photos appear below it?**  
+4. Widget title appears but no photos appear below it? 
 
-**Why my image gallery out of range?**  
+5. Why my image gallery out of range? 
   
-**Why my slideshow not scroll properly or why one image overlaps another at the time of scroll?**  
+6. Why my slideshow not scroll properly or why one image overlaps another at the time of scroll?  
 
 == Screenshots ==
 
@@ -121,6 +119,10 @@ Plugin *.po file (vs-slideshow.po) available in the languages folder. Translator
 
 1. Tested up to 3.9
 
+= 9.3 =
+
+1. Tested up to 4.0
+
 == Changelog ==
 
 = 1.0 =
@@ -177,3 +179,7 @@ Plugin *.po file (vs-slideshow.po) available in the languages folder. Translator
 = 9.2 =
 
 1. Tested up to 3.9
+
+= 9.3 =
+
+1. Tested up to 4.0
