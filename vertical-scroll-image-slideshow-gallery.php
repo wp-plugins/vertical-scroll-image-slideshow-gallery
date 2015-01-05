@@ -4,7 +4,7 @@ Plugin Name: Vertical scroll image slideshow gallery
 Plugin URI: http://www.gopiplus.com/work/2010/07/18/vertical-scroll-image-slideshow-gallery/
 Description:  This (VS slideshow) is a simple Image Vertical scroll slideshow Gallery plugin for WordPress widget. <a target="_blank" href='http://www.gopiplus.com/work/2010/07/18/vertical-scroll-image-slideshow-gallery/'>Click here to check more useful plugins.</a>
 Author: Gopi Ramasamy
-Version: 9.3
+Version: 9.4
 Author URI: http://www.gopiplus.com/work/
 Donate link: http://www.gopiplus.com/work/2010/07/18/vertical-scroll-image-slideshow-gallery/
 License: GPLv2 or later
