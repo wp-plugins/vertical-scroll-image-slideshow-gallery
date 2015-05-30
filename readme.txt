@@ -1,8 +1,8 @@
 === Vertical scroll image slideshow gallery ===
 Contributors: www.gopiplus.com, gopiplus
 Requires at least: 3.4
-Tested up to: 4.1
-Stable tag: 9.4
+Tested up to: 4.2.2
+Stable tag: 9.5
 Author URI: http://www.gopiplus.com/work/2010/07/18/vertical-scroll-image-slideshow-gallery/
 Plugin URI: http://www.gopiplus.com/work/2010/07/18/vertical-scroll-image-slideshow-gallery/
 Donate link: http://www.gopiplus.com/work/2010/07/18/vertical-scroll-image-slideshow-gallery/
@@ -127,6 +127,10 @@ Plugin *.po file (vs-slideshow.po) available in the languages folder. Translator
 
 1. Tested up to 4.1
 
+= 9.5 =
+
+1. Tested up to 4.2.2
+
 == Changelog ==
 
 = 1.0 =
@@ -191,3 +195,7 @@ Plugin *.po file (vs-slideshow.po) available in the languages folder. Translator
 = 9.4 =
 
 1. Tested up to 4.1
+
+= 9.5 =
+
+1. Tested up to 4.2.2
